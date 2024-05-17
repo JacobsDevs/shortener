@@ -7,4 +7,9 @@ RSpec.describe "Shortlinks" do
 		visit "#{link.shortlink}"
 		expect(current_path).to have_content("www.google.com")
 	end
+	it "Can count visits" do
+		link = Link.create!(shortlink: "abc", link: "http://www.google.com")
+
+		visit "#{link.shortlink}"
+	end
 end
