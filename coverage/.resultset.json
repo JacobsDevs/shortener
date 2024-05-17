@@ -237,6 +237,8 @@
           null,
           null,
           null,
+          null,
+          1,
           null
         ]
       },
@@ -259,8 +261,25 @@
           1,
           null
         ]
+      },
+      "/home/thegypsy/repos/shortener/app/controllers/link_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/thegypsy/repos/shortener/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1715947800
+    "timestamp": 1715949712
   }
 }
