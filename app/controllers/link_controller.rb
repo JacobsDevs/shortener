@@ -1,7 +1,8 @@
 class LinkController < ApplicationController
 	def index
-
+		@links = Link.all
 	end
+
 	def redirect
 		link = Link.find_by(shortlink: params[:shortlink])
 		if link.visit_count == nil
