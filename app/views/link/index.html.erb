@@ -1,3 +1,4 @@
 <% @links.each do | link |%>
 <p><%= "Shortlink: #{request.base_url}/#{link.shortlink}"%></p>
+<p><%= "Link: #{link.link}" %></p>
 <% end %>
