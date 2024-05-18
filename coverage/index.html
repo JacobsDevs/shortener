@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-05-17T22:57:57+10:00">2024-05-17T22:57:57+10:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-05-18T23:08:34+10:00">2024-05-18T23:08:34+10:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  98.39%
+  91.94%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         1.06
+       <span class="red">
+         0.92
        </span>
     </span> hits/line
     )
@@ -44,10 +44,10 @@
 
   <div class="t-line-summary">
     <b>62</b> relevant lines,
-    <span class="green"><b>61</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed. </span>
+    <span class="green"><b>57</b> lines covered</span> and
+    <span class="red"><b>5</b> lines missed. </span>
     (<span class="green">
-  98.39%
+  91.94%
 </span>
 )
   </div>
@@ -83,12 +83,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#9d85b7a7b9edd3b5fd4b11fadaa3cccd1a9b6371" class="src_link" title="app/controllers/link_controller.rb">app/controllers/link_controller.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">88.89 %</td>
+            <td class="red strong cell--number t-file__coverage">44.44 %</td>
             <td class="cell--number">16</td>
             <td class="cell--number">9</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">1.44</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">0.44</td>
             
           </tr>
         
@@ -309,8 +309,8 @@
   <div class="header">
     <h3>app/controllers/link_controller.rb</h3>
     <h4>
-      <span class="yellow">
-  88.89%
+      <span class="red">
+  44.44%
 </span>
 
       lines covered
@@ -320,8 +320,8 @@
 
     <div class="t-line-summary">
       <b>9</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
 
     
@@ -354,13 +354,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="3">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">		</code>
+            
+
+            <code class="ruby">		@links = Link.all</code>
           </li>
         </div>
       
@@ -376,7 +376,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
             <span class="hits">1</span>
             
 
@@ -387,30 +398,30 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="6">
-            <span class="hits">2</span>
+          <li class="missed" data-hits="0" data-linenumber="7">
+            
             
 
             
 
-            <code class="ruby">		link = Link.find_by shortlink: params[:shortlink]</code>
+            <code class="ruby">		link = Link.find_by(shortlink: params[:shortlink])</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="7">
-            <span class="hits">2</span>
+          <li class="missed" data-hits="0" data-linenumber="8">
+            
             
 
             
 
-            <code class="ruby">		if !link.visit_count</code>
+            <code class="ruby">		if link.visit_count == nil</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="8">
-            <span class="hits">2</span>
+          <li class="missed" data-hits="0" data-linenumber="9">
+            
             
 
             
@@ -420,7 +431,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -431,7 +442,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="10">
+          <li class="missed" data-hits="0" data-linenumber="11">
             
             
 
@@ -442,24 +453,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
             
 
             <code class="ruby">		end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="12">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">		require &#39;pry&#39;; binding.pry</code>
           </li>
         </div>
       
@@ -475,8 +475,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="14">
-            <span class="hits">2</span>
+          <li class="missed" data-hits="0" data-linenumber="14">
+            
             
 
             
