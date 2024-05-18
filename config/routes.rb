@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
 	root "link#index"
 
+	get "/links", to: "link#index"
+	get "/links/new", to: "link#new"
+	post "/links/create", to: "link#create"
 	get "/:shortlink", to: "link#redirect"
 end
