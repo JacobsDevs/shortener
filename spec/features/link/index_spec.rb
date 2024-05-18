@@ -5,7 +5,7 @@ RSpec.describe "Link Index" do
 		link1 = Link.create!(shortlink: "1a", link: "http://instagram.com")
 		link2 = Link.create!(shortlink: "be", link: "http://kogan.com")
 
-		visit "/"
+		visit "/links"
 
 		expect(page).to have_content("Shortlink: http://www.example.com/#{link1.shortlink}")
 	end
@@ -13,7 +13,7 @@ RSpec.describe "Link Index" do
 		link1 = Link.create!(shortlink: "1a", link: "http://instagram.com")
 		link2 = Link.create!(shortlink: "be", link: "http://kogan.com")
 
-		visit "/"
+		visit "/links"
 
 		expect(page).to have_content("Link: #{link1.link}")
 	end

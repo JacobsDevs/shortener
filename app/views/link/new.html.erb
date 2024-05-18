@@ -1,0 +1,7 @@
+<%= form_with url: "/links/create", method: :post, data: {turbo: false}, local: true do |f| %>
+	<%= f.label :link %>
+	<%= f.text_field :link %>
+	<%= f.label :shortlink %>
+	<%= f.text_field :shortlink %>
+	<%= f.submit "Save Link"%>
+<% end %>
