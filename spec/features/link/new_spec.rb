@@ -4,8 +4,8 @@ RSpec.describe "New Link Form" do
 	it "exists" do
 		visit "/links"
 
-		click_button "New Link"
-		save_and_open_page
+		click_link "New Link"
+
 		fill_in "Link", with: "pokemon.com"
 		fill_in "Shortlink", with: "poke"
 

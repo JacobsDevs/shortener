@@ -251,36 +251,20 @@
           null
         ]
       },
-      "/home/thegypsy/repos/shortener/app/controllers/link_controller.rb": {
+      "/home/thegypsy/repos/shortener/spec/features/link/new_spec.rb": {
         "lines": [
           1,
-          1,
-          2,
-          null,
           null,
           1,
-          null,
-          null,
-          1,
-          1,
-          0,
-          null,
           1,
           1,
           null,
           1,
           null,
+          1,
+          1,
           null,
           1,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
           null,
           1,
           1,
@@ -289,9 +273,34 @@
           null
         ]
       },
-      "/home/thegypsy/repos/shortener/app/controllers/application_controller.rb": {
+      "/home/thegypsy/repos/shortener/spec/features/link/shortlink_spec.rb": {
         "lines": [
           1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/thegypsy/repos/shortener/spec/models/link_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
           null
         ]
       },
@@ -308,8 +317,53 @@
           1,
           null
         ]
+      },
+      "/home/thegypsy/repos/shortener/app/controllers/link_controller.rb": {
+        "lines": [
+          1,
+          1,
+          6,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          0,
+          null,
+          null,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/thegypsy/repos/shortener/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1716040728
+    "timestamp": 1716208769
   }
 }
