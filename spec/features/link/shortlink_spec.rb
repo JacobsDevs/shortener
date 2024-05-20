@@ -5,7 +5,6 @@ RSpec.describe "Shortlinks" do
 		link = Link.create!(shortlink: "abc", link: "http://www.google.com")
 
 		visit "#{link.shortlink}"
-		save_and_open_page
 	end
 	it "Can count visits" do
 		link = Link.create!(shortlink: "abc", link: "http://www.google.com")

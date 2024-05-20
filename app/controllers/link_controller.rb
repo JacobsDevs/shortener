@@ -7,6 +7,10 @@ class LinkController < ApplicationController
 		render :new
 	end
 
+	def show
+		@link = Link.find_by(shortlink: params[:shortlink])
+	end
+
 	def create
 		if params[:link].start_with?("http://")
 			Link.create!(link_params)
