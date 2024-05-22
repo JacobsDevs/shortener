@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
 	get "/links", to: "link#index"
 	get "/links/new", to: "link#new"
-	post "/links/create", to: "link#create"
 	get "/links/:shortlink", to: "link#show"
+	get "/links/edit/:shortlink", to: "link#edit"
+	post "/links/create", to: "link#create"
 	get "/:shortlink", to: "link#redirect"
 end

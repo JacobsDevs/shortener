@@ -1,0 +1,8 @@
+<%= form_with url: "/links/update", method: :patch, local: true do |f| %>
+<%= f.label :shortlink %>
+<%= f.text_field :shortlink, value: @link.shortlink %>
+<br>
+<%= f.label :link %>
+<%= f.text_field :link, value: @link.link%>
+<%= f.submit "Update Link"%>
+<% end %>

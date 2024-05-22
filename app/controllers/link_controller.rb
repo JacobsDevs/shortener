@@ -21,6 +21,10 @@ class LinkController < ApplicationController
 		redirect_to "/links"
 	end
 
+	def edit
+		@link = Link.find_by(shortlink: params[:shortlink])
+	end
+
 	def redirect
 		link = Link.find_by(shortlink: params[:shortlink])
 		if link.visit_count == nil
