@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-05-22T21:48:08+10:00">2024-05-22T21:48:08+10:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-05-22T22:14:14+10:00">2024-05-22T22:14:14+10:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="yellow">
-  82.93%
+  86.21%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.83
+         0.87
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>82</b> relevant lines,
-    <span class="green"><b>68</b> lines covered</span> and
-    <span class="red"><b>14</b> lines missed. </span>
+    <b>87</b> relevant lines,
+    <span class="green"><b>75</b> lines covered</span> and
+    <span class="red"><b>12</b> lines missed. </span>
     (<span class="yellow">
-  82.93%
+  86.21%
 </span>
 )
   </div>
@@ -83,12 +83,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#9d85b7a7b9edd3b5fd4b11fadaa3cccd1a9b6371" class="src_link" title="app/controllers/link_controller.rb">app/controllers/link_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">41.67 %</td>
-            <td class="cell--number">43</td>
-            <td class="cell--number">24</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">0.42</td>
+            <td class="red strong cell--number t-file__coverage">57.14 %</td>
+            <td class="cell--number">50</td>
+            <td class="cell--number">28</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">0.61</td>
             
           </tr>
         
@@ -227,9 +227,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#97367a362a173a0920098ba85f76a1caf4e3c501" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">17</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">9</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -310,7 +310,7 @@
     <h3>app/controllers/link_controller.rb</h3>
     <h4>
       <span class="red">
-  41.67%
+  57.14%
 </span>
 
       lines covered
@@ -319,9 +319,9 @@
     
 
     <div class="t-line-summary">
-      <b>24</b> relevant lines.
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>14</b> lines missed.</span>
+      <b>28</b> relevant lines.
+      <span class="green"><b>16</b> lines covered</span> and
+      <span class="red"><b>12</b> lines missed.</span>
     </div>
 
     
@@ -442,8 +442,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="11">
-            
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
             
 
             
@@ -596,8 +596,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="25">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="25">
+            <span class="hits">2</span>
             
 
             
@@ -635,62 +635,62 @@
 
             
 
-            <code class="ruby">	def redirect</code>
+            <code class="ruby">	def update</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="29">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">		link = Link.find_by(shortlink: params[:shortlink])</code>
+            
+
+            <code class="ruby">		@link = Link.find_by(shortlink: params[:original_shortlink])</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="30">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="30">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">		if link.visit_count == nil</code>
+            
+
+            <code class="ruby">		@link.update!(link_params)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="31">
+          <li class="never" data-hits="" data-linenumber="31">
             
             
 
             
 
-            <code class="ruby">			link.update!(visit_count: 0)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="32">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">		else</code>
+            
+
+            <code class="ruby">		redirect_to &quot;/links/#{@link.shortlink}&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="33">
+          <li class="never" data-hits="" data-linenumber="33">
             
             
 
             
 
-            <code class="ruby">			link.update!(visit_count: (link.visit_count + 1))</code>
+            <code class="ruby">	end</code>
           </li>
         </div>
       
@@ -701,18 +701,18 @@
 
             
 
-            <code class="ruby">		end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="35">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="35">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">	def redirect</code>
           </li>
         </div>
       
@@ -723,62 +723,62 @@
 
             
 
-            <code class="ruby">		redirect_to(link.link, allow_other_host: true)</code>
+            <code class="ruby">		link = Link.find_by(shortlink: params[:shortlink])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="37">
+          <li class="missed" data-hits="0" data-linenumber="37">
             
             
 
             
 
-            <code class="ruby">	end</code>
+            <code class="ruby">		if link.visit_count == nil</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="missed" data-hits="0" data-linenumber="38">
             
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">			link.update!(visit_count: 0)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="39">
+            
             
 
             
 
-            <code class="ruby">	private</code>
+            <code class="ruby">		else</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="40">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="40">
+            
             
 
             
 
-            <code class="ruby">	def link_params</code>
+            <code class="ruby">			link.update!(visit_count: (link.visit_count + 1))</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
             
 
-            <code class="ruby">		params.permit(:shortlink, :link)</code>
+            <code class="ruby">		end</code>
           </li>
         </div>
       
@@ -789,12 +789,89 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="43">
+            
+            
+
+            
+
+            <code class="ruby">		redirect_to(link.link, allow_other_host: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="44">
+            
+            
+
+            
+
             <code class="ruby">	end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
+          <li class="never" data-hits="" data-linenumber="45">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="46">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">	private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="47">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">	def link_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="48">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">		params.permit(:shortlink, :link)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="49">
+            
+            
+
+            
+
+            <code class="ruby">	end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="50">
             
             
 
@@ -3362,8 +3439,8 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>10</b> relevant lines.
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3546,12 +3623,23 @@
 
             
 
+            <code class="ruby">	patch &quot;/links/update&quot;,to: &quot;link#update&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">	get &quot;/:shortlink&quot;, to: &quot;link#redirect&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 

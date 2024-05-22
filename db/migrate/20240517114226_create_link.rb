@@ -4,6 +4,7 @@ class CreateLink < ActiveRecord::Migration[7.1]
       t.string :shortlink
       t.string :link
 			t.integer :visit_count
+			t.boolean :editing, :default => false
 
       t.timestamps
     end
