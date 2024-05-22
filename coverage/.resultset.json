@@ -243,80 +243,13 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
       "/home/thegypsy/repos/shortener/app/helpers/application_helper.rb": {
         "lines": [
           1,
-          null
-        ]
-      },
-      "/home/thegypsy/repos/shortener/spec/features/link/new_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/thegypsy/repos/shortener/spec/features/link/shortlink_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/thegypsy/repos/shortener/spec/features/link/show_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/thegypsy/repos/shortener/spec/models/link_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
           null
         ]
       },
@@ -338,7 +271,25 @@
         "lines": [
           1,
           1,
-          6,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
           null,
           null,
           1,
@@ -346,33 +297,19 @@
           null,
           null,
           1,
-          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
           null,
           null,
           1,
           1,
           0,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          null,
-          0,
-          null,
-          null,
-          2,
-          null,
-          null,
-          1,
-          1,
-          1,
           null,
           null
         ]
@@ -384,6 +321,6 @@
         ]
       }
     },
-    "timestamp": 1716209484
+    "timestamp": 1716378488
   }
 }
