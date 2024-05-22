@@ -13,5 +13,6 @@ Rails.application.routes.draw do
 	get "/links/:shortlink", to: "link#show"
 	get "/links/edit/:shortlink", to: "link#edit"
 	post "/links/create", to: "link#create"
+	patch "/links/update",to: "link#update"
 	get "/:shortlink", to: "link#redirect"
 end

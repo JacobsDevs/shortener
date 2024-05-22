@@ -9,6 +9,7 @@ class LinkController < ApplicationController
 
 	def show
 		@link = Link.find_by(shortlink: params[:shortlink])
+		@link.update!(editing: false)
 	end
 
 	def create
@@ -23,6 +24,30 @@ class LinkController < ApplicationController
 
 	def edit
 		@link = Link.find_by(shortlink: params[:shortlink])
+		@link.update!(editing: true)
+	end
+
+	def update
+		@link = Link.find_by(shortlink: params[:original_shortlink])
+		@links = Link.all
+
+		if Link.find_by(shortlink: link_params[:shortlink])
+			if params[:original_shortlink] != params[:shortlink]
+				flash[:error] = "This shortlink is already taken!"
+				redirect_to "/links"
+				return
+			end
+		end
+
+		if @link.editing
+			@link.update!(link_params)
+		else
+			flash[:error] = "I don't think you should be doing that..."
+			redirect_to "/links"
+			return
+		end
+
+		redirect_to "/links/#{@link.shortlink}"
 	end
 
 	def redirect
