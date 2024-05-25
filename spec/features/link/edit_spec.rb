@@ -20,7 +20,7 @@ RSpec.describe "Link Edit" do
 		fill_in "Shortlink", with: "b"
 
 		click_button "Update Link"
-		save_and_open_page
+
 		expect(current_path).to have_content("/links/b")
 		expect(page).to have_content("Link: http://www.facebook.com")
 	end
