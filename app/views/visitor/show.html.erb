@@ -1,0 +1,4 @@
+<%= "IP: #{@visitor.ip_address}" %>
+<% @visitor.links.each do |link| %>
+<%= "Visited Shortlink: #{link.shortlink}" %>
+<% end %>
