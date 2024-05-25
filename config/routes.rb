@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 	post "/links/create", to: "link#create"
 	patch "/links/update",to: "link#update"
 	get "/:shortlink", to: "link#redirect"
+
+	get "visitors/:id", to: "visitor#show"
 end
