@@ -52,8 +52,9 @@ class LinkController < ApplicationController
 
 	def redirect
 		link = Link.find_by(shortlink: params[:shortlink])
+		Visitor.log_visit(link)
 		if link.visit_count == nil
-			link.update!(visit_count: 0)
+			link.update!(visit_count: 1)
 		else
 			link.update!(visit_count: (link.visit_count + 1))
 		end
