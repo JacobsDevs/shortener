@@ -1,3 +1,6 @@
 <%= "Link: #{@link.link}" %>
 <%= "Shortlink: #{@link.shortlink}" %>
 <%= "Visit Count: #{@link.visit_count}"%>
+<% @link.visitors.each do |visitor| %>
+<%= "Visitor: #{visitor.ip_address}" %>
+<% end %>
