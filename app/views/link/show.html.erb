@@ -1,6 +1,6 @@
-<%= "Link: #{@link.link}" %>
-<%= "Shortlink: #{@link.shortlink}" %>
-<%= "Visit Count: #{@link.visit_count}"%>
-<% @link.visitors.each do |visitor| %>
-<%= "Visitor: #{visitor.ip_address}" %>
+<p><%= "Link: #{@link.link}" %></p>
+<p><%= "Shortlink: #{@link.shortlink}" %></p>
+<p><%= "Visit Count: #{@link.visit_count}"%></p>
+<% @link.visitors.each do |visitor| %></p>
+<p><%= "Visitor: #{visitor.ip_address}" %></p>
 <% end %>
