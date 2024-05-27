@@ -4,7 +4,7 @@ class Visitor < ApplicationRecord
 	has_many :links_visitors
 	has_many :links, through: :links_visitors
 
-	after_create :init
+	after_commit :init
 	
 	private
 	def init
