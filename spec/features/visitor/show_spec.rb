@@ -11,4 +11,12 @@ RSpec.describe "Visitor Show Page" do
 		expect(page).to have_content("IP: #{visitor.ip_address}")
 		expect(page).to have_content("Visited Shortlink: #{link.shortlink}")
 	end
+
+	it "has the visitor's location" do
+		visitor = Visitor.create!(ip_address: "159.196.225.5")
+
+		visit "/visitors/#{visitor.id}"
+
+		expect(page).to have_content("Location: Melbourne, AU")
+	end
 end
