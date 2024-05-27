@@ -1,3 +1,5 @@
+require "geocoder"
+
 class Visitor < ApplicationRecord
 	has_many :links_visitors
 	has_many :links, through: :links_visitors
@@ -6,8 +8,8 @@ class Visitor < ApplicationRecord
 	
 	private
 	def init
-		results = Geocoder.search(ip_address)
-		puts(results)
+		results = Geocoder.search(request.remote_ip)
+		puts(results.first)
 		self.update!(country: results.first.country)
 		self.update!(city: results.first.city)
 	end
