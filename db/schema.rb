@@ -28,15 +28,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_25_140752) do
     t.bigint "visitor_id", null: false
   end
 
-  create_table "links_visits", force: :cascade do |t|
-    t.integer "link_id"
-    t.integer "visitor_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "visitors", force: :cascade do |t|
     t.string "ip_address"
+    t.string "country"
+    t.string "city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
