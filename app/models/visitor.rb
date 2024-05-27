@@ -7,6 +7,7 @@ class Visitor < ApplicationRecord
 	private
 	def init
 		results = Geocoder.search(ip_address)
+		puts(results)
 		self.update!(country: results.first.country)
 		self.update!(city: results.first.city)
 	end
