@@ -1,5 +1,5 @@
 <%= link_to "New Link", "/links/new" %>
 <% @links.each do | link |%>
-<p><%= "Shortlink: #{request.base_url}/#{link.shortlink}"%></p>
-<p><%= "Link: #{link.link}" %></p>
+<p class="text-center text-lg text-black max-w-sm mx-auto font-semibold"><%= "Shortlink: #{request.base_url}/#{link.shortlink}"%></p>
+<p class="text-center font-medium text-white bg-purple-700 max-w-48 mx-auto rounded-md mb-8"><%= "Link: #{link.link}" %></p>
 <% end %>

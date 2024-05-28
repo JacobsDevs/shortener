@@ -1,5 +1,5 @@
 <%= "IP: #{@visitor.ip_address}" %>
-<%= "Location: #{@visitor.city}, #{@visitor.country}" %>
+<p><%= "Location: #{@visitor.city}, #{@visitor.country}" %></p>
 <% @visitor.links.each do |link| %>
-<%= "Visited Shortlink: #{link.shortlink}" %>
+<p><%= "Visited Shortlink: #{link.shortlink}" %></p>
 <% end %>
