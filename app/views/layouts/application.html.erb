@@ -11,12 +11,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="ring-2 max-w-fit mx-auto mt-12 rounded-md p-10 py-2 shadow-xl shadow-red-700">
 		<% flash.each do |type, msg| %>
 			<div>
 				<%= msg %>
 			</div>
   	<% end %>
+		<% the_class = 'rounded-md shadow-xl mx-auto scale-50 -mt-8'%>
+		<%= image_tag "Logo.png", class: the_class %>
     <%= yield %>
   </body>
 </html>
