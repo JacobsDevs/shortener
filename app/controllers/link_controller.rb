@@ -53,11 +53,6 @@ class LinkController < ApplicationController
 	def redirect
 		link = Link.find_by(shortlink: params[:shortlink])
 		link.log_visit(request.remote_ip)
-		if link.visit_count == nil
-			link.update!(visit_count: 1)
-		else
-			link.update!(visit_count: (link.visit_count + 1))
-		end
 
 		redirect_to(link.link, allow_other_host: true)
 	end
