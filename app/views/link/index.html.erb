@@ -1,5 +1,6 @@
+<meta name="turbo-prefetch" content="false">
 <div class="mx-auto text-center max-w-fit"><%= link_to "New Link", "/links/new" %></div>
 <% @links.each do | link |%>
 <p class="text-center text-lg text-black max-w-sm mx-auto font-semibold"><%= "#{request.base_url}/#{link.shortlink}"%></p>
-<%= link_to "#{link.link}", "/#{link.shortlink}", method: :get, class: "text-center p-2 font-medium max-w-fit mx-auto ring-slate-600 ring-2 rounded-md mb-8 hover:shadow-xl" %>
+<%= link_to "#{link.link}", "/#{link.shortlink}", data: {method: :get, turbolinks: false}, class: "text-center p-2 font-medium max-w-fit mx-auto ring-slate-600 ring-2 rounded-md mb-8 hover:shadow-xl" %>
 <% end %>
