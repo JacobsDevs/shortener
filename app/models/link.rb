@@ -4,11 +4,7 @@ class Link < ApplicationRecord
 	validates :shortlink, :link, presence: true
 
 	def log_visit(ip_address)
-		if self.visit_count == nil
-			self.visit_count = 1
-		else
-			self.visit_count = visit_count + 1
-		end
+		self.visit_count ? self.visit_count+=1 : self.visit_count = 1
 		self.visitors.create!(ip_address: ip_address)
 		self.save
 	end

@@ -3,6 +3,7 @@
   <head>
     <title>Shortener</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
@@ -12,6 +13,7 @@
   </head>
 
   <body class="ring-2 max-w-fit mx-auto mt-12 rounded-md p-10 py-2 px-40 shadow-2xl shadow-slate-900">
+		<meta name="turbo-prefetch" content="false">
 		<% flash.each do |type, msg| %>
 			<div>
 				<%= msg %>
