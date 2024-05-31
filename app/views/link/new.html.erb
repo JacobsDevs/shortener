@@ -1,7 +1,13 @@
 <%= form_with url: "/links/create", method: :post, data: {turbo: false}, local: true do |f| %>
-	<%= f.label :link %>
-	<%= f.text_field :link %>
-	<%= f.label :shortlink %>
-	<%= f.text_field :shortlink %>
-	<%= f.submit "Save Link"%>
+	<div class="flex flex-row justify-end items-center space-x-10 -mb-4">
+	<%= f.label :link, class: "mx-auto"%>
+	<%= f.text_field :link, class: "" %>
+	</div>
+	<br>
+	<div class="flex flex-row justify-end items-center space-x-10">
+	<%= f.label :shortlink, class: "mx-auto" %>
+	<div><%= f.text_field :shortlink, class: "" %></div>
+	</div>
+	<br>
+	<p class="mx-auto text-center max-w-fit"><%= f.submit "Save Link", class: "text-center text-green-800 mb-6 ring-green-800 bg-green-400 ring-2 rounded-md p-1.5 shadow-slate-400 shadow-lg"%></p>
 <% end %>
