@@ -1,19 +1,36 @@
 <div class="text-center">
-<p class="text-xl font-bold"><%= "Link" %></p>
+<p class="text-2xl font-bold"><%= "Link" %></p>
 <div class="mb-4"><%= @link.link %></div>
-<p class="text-xl font-bold"><%= "Shortlink" %></p>
+<p class="text-2xl font-bold"><%= "Shortlink" %></p>
 <div class="mb-4"><%= @link.shortlink %></div>
 <p class="mb-4"><%= "Visit Count: #{@link.visit_count}"%></p>
 </div>
-<table class="mx-auto table-auto ring-2 ring-black rounded-md border-neutral-800 border-double my-4 divide-y divide-black">
-	<thead>
-		<th class="text-center p-2">Visitor IP</th>
-	</thead>
-	<tbody>
-		<% @link.visitors.each do |visitor| %></p>
-		<tr>
-		<td class="text-center p-2 hover:bg-slate-200"><%= "#{visitor.ip_address}" %></td>
-		</tr>
-		<% end %>
-	</tbody>
-</table>
+<div class="">
+	<table class="mx-auto text-center table-auto divide-y divide-grey-700 ring-2 rounded-md">
+		<thead class="rounded-t-md bg-slate-500">
+			<th class="p-2 ">Visitor IP</th>
+			<th class="p-2 ">Visits</th>
+		</thead>
+		<tbody class="divide-y divide-grey-700">
+			<% @link.visitors.each_with_index do |visitor, index| %></p>
+				<% if index == 1 %>
+				<%# First Column %>
+					<tr>
+						<td class="p-2 rounded-b-md hover:bg-slate-300"><%= "#{visitor.ip_address}" %></td>
+						<td class="p-2 hover:bg-blue-300">Count</td>
+				<% elsif index == @link.visitors.size - 1 %>
+				<%# Second Column %>
+					<tr>
+						<td class="p-2 rounded-b-md hover:bg-slate-300"><%= "#{visitor.ip_address}" %></td>
+						<td class="p-2 hover:bg-blue-300">Count</td>
+				<% else %>
+				<%# Middle Column %>
+					<tr>
+						<td class="p-2 hover:bg-blue-300"><%= "#{visitor.ip_address}" %></td>
+						<td class="p-2 hover:bg-blue-300">Count</td>
+				<% end %>
+					</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
