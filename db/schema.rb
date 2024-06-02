@@ -26,6 +26,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_25_140752) do
   create_table "links_visitors", id: false, force: :cascade do |t|
     t.bigint "link_id", null: false
     t.bigint "visitor_id", null: false
+    t.integer "visits"
   end
 
   create_table "visitors", force: :cascade do |t|
