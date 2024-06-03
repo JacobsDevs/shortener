@@ -17,17 +17,17 @@
 				<%# First Column %>
 					<tr>
 						<td class="p-2 rounded-b-md hover:bg-slate-300"><%= "#{visitor.ip_address}" %></td>
-						<td class="p-2 hover:bg-blue-300">Count</td>
+						<td class="p-2 hover:bg-blue-300"><%= "#{LinksVisitor.find_by(visitor_id: visitor.id).visits}" %></td>
 				<% elsif index == @link.visitors.size - 1 %>
 				<%# Second Column %>
 					<tr>
 						<td class="p-2 rounded-b-md hover:bg-slate-300"><%= "#{visitor.ip_address}" %></td>
-						<td class="p-2 hover:bg-blue-300">Count</td>
+						<td class="p-2 hover:bg-blue-300"><%= "#{LinksVisitor.find_by(visitor_id: visitor.id).visits}" %></td>
 				<% else %>
 				<%# Middle Column %>
 					<tr>
 						<td class="p-2 hover:bg-blue-300"><%= "#{visitor.ip_address}" %></td>
-						<td class="p-2 hover:bg-blue-300">Count</td>
+						<td class="p-2 hover:bg-blue-300"><%= "#{LinksVisitor.find_by(visitor_id: visitor.id).visits}" %></td>
 				<% end %>
 					</tr>
 			<% end %>
