@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 	get "/:shortlink", to: "link#redirect"
 
 	get "visitors/:id", to: "visitor#show"
+
+	get "customers/:id", to: "customer#show"
 end
