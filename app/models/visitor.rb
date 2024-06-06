@@ -4,6 +4,14 @@ class Visitor < ApplicationRecord
 
 	after_create :init
 	
+	def is_customer?
+		if Customer.find_by!(ip_address: self.ip_address)
+			return true
+		else
+			return false
+		end
+	end
+	
 	private
 	def init
 		results = Geocoder.search(ip_address)
