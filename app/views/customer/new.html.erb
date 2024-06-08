@@ -1,0 +1,10 @@
+<p class="text-2xl">Create new Customer</p>
+<%= form_with url: "/customers/create", method: :post, data:{turbo: false}, local: true do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :email %>
+<%= f.text_field :email %>
+<%= f.label :phone_number %>
+<%= f.text_field :phone_number %>
+<%= f.submit "Save Customer"%>
+<% end %>

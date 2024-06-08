@@ -22,6 +22,6 @@ RSpec.describe "Link Edit" do
 		click_button "Update Link"
 
 		expect(current_path).to have_content("/links/b")
-		expect(page).to have_content("Link: http://www.facebook.com")
+		expect(page).to have_content("Link\nhttp://www.facebook.com")
 	end
 end

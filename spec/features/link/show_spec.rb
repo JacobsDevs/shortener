@@ -6,8 +6,8 @@ RSpec.describe "Link Show Page" do
 
 		visit "/links/#{link.shortlink}"
 
-		expect(page).to have_content("Link: #{link.link}")
-		expect(page).to have_content("Shortlink: #{link.shortlink}")
+		expect(page).to have_content("Link\n#{link.link}")
+		expect(page).to have_content("Shortlink\n#{link.shortlink}")
 	end
 
 	it "Shows Visits" do
