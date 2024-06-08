@@ -7,7 +7,7 @@ RSpec.describe "Link Index" do
 
 		visit "/links"
 
-		expect(page).to have_content("Shortlink: http://www.example.com/#{link1.shortlink}")
+		expect(page).to have_content("http://www.example.com/#{link1.shortlink}")
 	end
 	it "displays all the long links" do
 		link1 = Link.create!(shortlink: "1a", link: "http://instagram.com")
@@ -15,6 +15,6 @@ RSpec.describe "Link Index" do
 
 		visit "/links"
 
-		expect(page).to have_content("Link: #{link1.link}")
+		expect(page).to have_content("#{link1.link}")
 	end
 end

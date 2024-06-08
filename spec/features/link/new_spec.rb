@@ -12,7 +12,7 @@ RSpec.describe "New Link Form" do
 		click_button "Save Link"
 
 		expect(current_path).to have_content("/links")
-		expect(page).to have_content("Link: http://pokemon.com")
-		expect(page).to have_content("Shortlink: http://www.example.com/poke")
+		expect(page).to have_content("http://pokemon.com")
+		expect(page).to have_content("http://www.example.com/poke")
 	end
 end

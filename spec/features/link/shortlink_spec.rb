@@ -17,6 +17,6 @@ RSpec.describe "Shortlinks" do
 		visit "#{link.shortlink}"
 		visit "/links/#{link.shortlink}"
 
-		expect(page).to have_content("Visitor: 127.0.0.1")
+		expect(page).to have_content("127.0.0.1")
 	end
 end

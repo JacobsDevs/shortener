@@ -16,8 +16,9 @@ Rails.application.routes.draw do
 	patch "/links/update",to: "link#update"
 	get "/:shortlink", to: "link#redirect"
 
-	get "visitors/:id", to: "visitor#show"
+	get "/visitors/:id", to: "visitor#show"
 
-	get "customers/new", to: "customer#new"
-	get "customers/:id", to: "customer#show"
+	get "/customers/new", to: "customer#new"
+	post "/customers/create", to: "customer#create"
+	get "/customers/:id", to: "customer#show"
 end
