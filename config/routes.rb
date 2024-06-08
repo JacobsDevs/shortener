@@ -18,5 +18,6 @@ Rails.application.routes.draw do
 
 	get "visitors/:id", to: "visitor#show"
 
+	get "customers/new", to: "customer#new"
 	get "customers/:id", to: "customer#show"
 end
