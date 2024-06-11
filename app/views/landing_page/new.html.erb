@@ -1,0 +1,6 @@
+<h1>New Landing Page</h1>
+<%= form_with url: "/landing_page/create", method: :post, data: {turbo: false}, local: true do |f| %>
+	<%= f.label :destination %>
+	<%= f.text_field :destination %>
+	<%= f.submit "Create Page"%>
+<% end %>

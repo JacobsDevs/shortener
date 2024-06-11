@@ -21,4 +21,7 @@ Rails.application.routes.draw do
 	get "/customers/new", to: "customer#new"
 	post "/customers/create", to: "customer#create"
 	get "/customers/:id", to: "customer#show"
+
+	get "/landing_page/new", to: "landing_page#new"
+	post "/landing_page/create", to: "landing_page#create"
 end
