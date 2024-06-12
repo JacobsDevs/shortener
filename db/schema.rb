@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_11_114701) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_12_031253) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_11_114701) do
     t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "fields", force: :cascade do |t|
+    t.string "name"
+    t.string "label"
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "landing_page_id", null: false
+    t.index ["landing_page_id"], name: "index_fields_on_landing_page_id"
   end
 
   create_table "landing_pages", force: :cascade do |t|
@@ -52,4 +62,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_11_114701) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "fields", "landing_pages"
 end
