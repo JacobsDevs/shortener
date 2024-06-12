@@ -2,5 +2,10 @@
 <%= form_with url: "/landing_page/create", method: :post, data: {turbo: false}, local: true do |f| %>
 	<%= f.label :destination %>
 	<%= f.text_field :destination %>
-	<%= f.submit "Create Page"%>
+	<%= f.submit "Create Page" %>
+<% end %>
+
+<%= form_with url: "/landing_page/create/add_text_field", method: :get, data: {turbo: false}, fields:@fields, local: true do |f| %>
+	<%= f.submit "Add Text Field" %>
+	<%= f.hidden_field :fields, value: @fields%>
 <% end %>

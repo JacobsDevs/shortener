@@ -3,6 +3,9 @@ class LandingPageController < ApplicationController
 	end
 
 	def create
-		LandingPage.create!(destination: params[:destination])
+		a = LandingPage.create!(destination: params[:destination])
+	end
+
+	def add_text_field
 	end
 end
