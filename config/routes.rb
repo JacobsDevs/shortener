@@ -24,5 +24,5 @@ Rails.application.routes.draw do
 
 	get "/landing_page/new", to: "landing_page#new"
 	post "/landing_page/create", to: "landing_page#create"
-	get "/landing_page/create/add_text_field", to: "landing_page#add_text_field"
+	post "/landing_page/create/add_text_field", to: "landing_page#add_text_field"
 end

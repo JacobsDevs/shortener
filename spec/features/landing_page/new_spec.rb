@@ -18,7 +18,11 @@ RSpec.describe "Landing Page new page" do
 		visit "/landing_page/new"
 		
 		click_button "Add Text Field"
+		click_button "Add Text Field"
+
 		expect(page).to have_content("New Landing Page")
-		expect(page).to have_selector("input#new_field_name")
+		expect(page).to have_selector("input#label_1")
+
+		click_button "Create Page"
 	end
 end
