@@ -1,0 +1,8 @@
+<%# locals: (name:, field_type:, label:, field:, index:) -%>
+<p><%= field.label "label_#{index}" %>
+<%= field.text_field "label_#{index}", value: label %></p>
+<% if field_type == "text"%>
+<p><%= field.label "name_#{index}" %>
+<%= field.text_field "name_#{index}", value: name %></p>
+<% end %>
+<br>
