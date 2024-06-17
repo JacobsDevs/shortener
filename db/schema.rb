@@ -20,9 +20,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_12_031253) do
     t.string "ip_address"
     t.string "email"
     t.string "phone_number"
-    t.string "custom_attributes", default: [], array: true
-    t.string "custom_attributes_values", default: [], array: true
-    t.hstore "customs"
+    t.hstore "customs", default: {}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
