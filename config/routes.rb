@@ -23,8 +23,9 @@ Rails.application.routes.draw do
 	get "/customers/:id", to: "customer#show"
 
 	get "/landing_page/new", to: "landing_page#new"
-	get "/landing_page/:id", to: "landing_page#show"
+	get "/landing_page/show/:id", to: "landing_page#show"
+	get "/landing_page/:id", to: "landing_page#form"
 	post "/landing_page/create", to: "landing_page#create"
 	post "/landing_page/create/add_text_field", to: "landing_page#add_text_field"
-
+	post "/landing_page/submit", to: "landing_page#submit"
 end

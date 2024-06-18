@@ -1,0 +1,7 @@
+<%= form_with url: "/landing_page/submit", method: :post, data: {turbo: false}, local: true do |f| %>
+	<% @landing_page.fields.each do |field| %>
+		<%= f.label field.label.to_sym %>
+		<%= f.text_field field.name.to_sym %>
+	<% end %>
+	<%= f.submit "Submit" %>
+<% end %>

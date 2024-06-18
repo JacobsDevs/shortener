@@ -5,8 +5,9 @@ RSpec.describe "Landing Page Show" do
 		landing = LandingPage.create!(destination: "www.google.com")
 		landing.add_text_field
 
-		visit "/landing_page/#{landing.id}"
+		visit "/landing_page/show/#{landing.id}"
 		
+		save_and_open_page
 		expect(page).to have_content("Destination: #{landing.destination}")
 		expect(page).to have_content("label: new_field_name")
 	end
