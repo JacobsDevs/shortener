@@ -17,7 +17,7 @@ class LandingPageController < ApplicationController
 
 	def submit
 		customer = Customer.create!(name: params["Client Name"])
-		
+
 		redirect_to "/customers/#{customer.id}"
 	end
 
