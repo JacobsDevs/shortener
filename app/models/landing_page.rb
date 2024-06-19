@@ -6,8 +6,9 @@ class LandingPage < ApplicationRecord
 	end
 
 	def save_fields(params)
-		fields.each do |field|
-			field.update!(label: params["field_#{field.id}_label"])
+		update!(destination: params[:destination])
+		fields.each_with_index do |field, i|
+			field.update!(label: params["label_#{i}"], name: params["name_#{i}"])
 		end
 	end
 end
