@@ -5,6 +5,11 @@ class LandingPageController < ApplicationController
 
 	def create
 		landing_page = LandingPage.find(params[:id])
+		if params[:commit] == "Add Text Field"
+			add_text_field
+		elsif params[:commit] == "Create Page"
+
+		end
 	end
 
 	def show
@@ -22,7 +27,8 @@ class LandingPageController < ApplicationController
 	end
 
 	def add_text_field
-		@landing_page = LandingPage.find(params[:data]['id'])
+		@landing_page = LandingPage.find(params[:id])
+		@landing_page.save_fields(params)
 		@landing_page.add_text_field
 		render :new
 	end

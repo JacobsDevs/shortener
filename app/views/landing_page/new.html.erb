@@ -2,12 +2,12 @@
 <%= form_with url: "/landing_page/create?id=#{@landing_page.id}", method: :post, data: {turbo: false}, local: true do |f| %>
 	<br>
 	<%= f.label :destination %>
-	<%= f.text_field :destination %>
+	<%= f.text_field :destination, value: @landing_page.destination %>
 	<div class="mb-6"></div>
 	<p><% @landing_page.fields.each_with_index do |field, index| %>
 		<%= render partial: 'shared/field', locals: {label: field.label, field_type: field.field_type, name: field.name, field: f, index: index}%>
 	<% end %></p>
-	<%= f.submit "Create Page" %>
+	<%= f.submit "Create Page" %>	<%= f.submit "Add Text Field" %>
 <% end %>
 
-<%= button_to "Add Text Field", action: "add_text_field", data: {id: @landing_page} %>
+<%# <%= button_to "Add Text Field", action: "add_text_field", data: {id: @landing_page} %> 
