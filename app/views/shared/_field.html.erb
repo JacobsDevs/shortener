@@ -1,8 +1,6 @@
 <%# locals: (name:, field_type:, label:, field:, index:) -%>
-<p><%= field.label "label_#{index}" %>
-<%= field.text_field "label_#{index}", value: label %></p>
+<div class="-mb-4 flex justify-center space-x-4"><%= field.text_field "label_#{index}", placeholder: "Label", class: "max-w-32 mt-1 mr-1 w-full rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
 <% if field_type == "text"%>
-<p><%= field.label "name_#{index}" %>
-<%= field.text_field "name_#{index}", value: name %></p>
+<%= field.text_field "name_#{index}", placeholder: "Value Name", class: "max-w-48 mt-1 ml-1 w-full rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %></div>
 <% end %>
 <br>

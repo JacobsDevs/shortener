@@ -1,13 +1,16 @@
-<h1>New Landing Page</h1>
+<h1 class="flex justify-center">New Landing Page</h1>
 <%= form_with url: "/landing_page/create?id=#{@landing_page.id}", method: :post, data: {turbo: false}, local: true do |f| %>
 	<br>
-	<%= f.label :destination %>
-	<%= f.text_field :destination, value: @landing_page.destination %>
+	<div class="flex justify-center "><%= f.text_field :destination, value: @landing_page.destination, class: "-mb-4 mt-1 rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:ring-opacity-50", placeholder: "Destination"%></div>
 	<div class="mb-6"></div>
 	<p><% @landing_page.fields.each_with_index do |field, index| %>
 		<%= render partial: 'shared/field', locals: {label: field.label, field_type: field.field_type, name: field.name, field: f, index: index}%>
 	<% end %></p>
-	<%= f.submit "Create Page" %>	<%= f.submit "Add Text Field" %>
+	<div class="flex justify-center space-x-4"><%= f.submit "Create Page", class: "bg-indigo-900 rounded-lg shadow text-center text-white text-base font-semibold py-3 mt-9 p-2" %>	
+	<%= f.submit "Add Text Field", class: "bg-indigo-900 rounded-lg shadow text-center text-white text-base font-semibold py-3 mt-9 p-2" %>
+	<%= f.submit "Add Number Field", class: "bg-indigo-900 rounded-lg shadow text-center text-white text-base font-semibold py-3 mt-9 p-2" %>
+	<%= f.submit "Add Email Field", class: "bg-indigo-900 rounded-lg shadow text-center text-white text-base font-semibold py-3 mt-9 p-2" %></div>
 <% end %>
 
 <%# <%= button_to "Add Text Field", action: "add_text_field", data: {id: @landing_page} %> 
+
