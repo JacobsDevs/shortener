@@ -8,7 +8,8 @@ class LandingPageController < ApplicationController
 		if params[:commit] == "Add Text Field"
 			add_text_field
 		elsif params[:commit] == "Create Page"
-
+			landing_page.save_fields(params)
+			redirect_to "/landing_page/#{landing_page.id}"
 		end
 	end
 
