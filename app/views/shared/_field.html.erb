@@ -1,11 +1,11 @@
-<%# locals: (name:, field_type:, label: "Lable", field:, index:) -%>
-<% if label == "" || label == nil || label=="label"%>
+<%# locals: (name:, field_type:, label:, field:, index:) -%>
+<% if label == "" || label == nil %>
 <div class="-mb-4 flex justify-center space-x-4"><%= field.text_field "label_#{index}", placeholder: "Label", class: "max-w-32 mt-1 mr-1 w-full rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
 <% else%>
 <div class="-mb-4 flex justify-center space-x-4"><%= field.text_field "label_#{index}", value: label, class: "max-w-32 mt-1 mr-1 w-full rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
 <% end %>
 <% if field_type == "text"%>
-	<% if name == "" || name == nil || name == "new_field_name"%>
+	<% if name == "" || name == nil %>
 		<%= field.text_field "name_#{index}", placeholder: "Data Name", class: "max-w-48 mt-1 ml-1 w-full rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %></div>
 	<% else %>
 		<%= field.text_field "name_#{index}", value: name, class: "max-w-48 mt-1 ml-1 w-full rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %></div>

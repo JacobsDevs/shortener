@@ -2,7 +2,7 @@ class LandingPage < ApplicationRecord
 	has_many :fields
 
 	def add_text_field
-		fields.create!(name: "new_field_name", field_type: "text", label: "label")
+		fields.create!(name: "", field_type: "text", label: "")
 	end
 
 	def save_fields(params)
