@@ -4,6 +4,7 @@ class CreateField < ActiveRecord::Migration[7.1]
       t.string :name
       t.string :label
       t.string :field_type
+			t.integer :position
 
       t.timestamps
     end

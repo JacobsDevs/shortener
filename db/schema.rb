@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_12_031253) do
     t.string "name"
     t.string "label"
     t.string "field_type"
+    t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "landing_page_id", null: false
